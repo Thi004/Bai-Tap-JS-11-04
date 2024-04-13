@@ -5,10 +5,18 @@
     <title>doiNhietDo</title>
 </head>
 <body>
+<input type="text" id="độ C" placeholder="độ C">
+<button onclick="getData()">Đổi sang độ F</button>
+<h3 id="kq"></h3>
 <script>
-    let a = parseFloat(prompt("Nhập độ C vào:"));
-    let b = (a * 9/5) + 32;
-    document.write( a + " độ C (Celsius) Tương ứng với " + b + "  độ F (Fahrenheit)");
+    //let a = +prompt("Nhập độ C vào:");
+    //let b = (a * 9/5) + 32;
+    //document.write( a + " độ C (Celsius) Tương ứng với " + b + "  độ F (Fahrenheit)");
+    function getData () {
+        let valueInput = document.getElementById("độ C").value;
+        let b = (valueInput * 9/5) + 32;
+        document.getElementById("kq").innerHTML = b;
+    }
 </script>
 
 </body>
